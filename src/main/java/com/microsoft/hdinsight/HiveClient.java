@@ -26,6 +26,6 @@ public class HiveClient {
         while (rs.next()) {
             System.out.println(rs.getString(1));
         }
-        System.out.println("\n-----------------Result end------------------");
+        System.out.println("\n-----------------Result end--------------------");
     }
 }
