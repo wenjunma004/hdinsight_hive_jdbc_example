@@ -16,16 +16,16 @@ public class HiveClient {
     public static void main(String[] args) throws Exception {
         Class.forName(HiveDriverName);
         Connection con = DriverManager.getConnection(jdbcUrl, userName, userPass);
-        System.out.println("\n Got Connection: " + con);
-        System.out.println("\n Run show tables command and listing 'default' Database tables of hive.");
+        System.out.println("\nGot Connection: " + con);
+        System.out.println("\nRun show tables command and listing 'default' Database tables of hive.");
         Statement stmt = con.createStatement();
         String sql = "show tables";
-        System.out.println("\n Executing Query: " + sql);
+        System.out.println("\nExecuting Query: " + sql);
         ResultSet rs = stmt.executeQuery(sql);
-        System.out.println("\n -----------------Result start------------------");
+        System.out.println("\n-----------------Result start------------------");
         while (rs.next()) {
             System.out.println(rs.getString(1));
         }
-        System.out.println("\n -----------------Result start------------------");
+        System.out.println("\n-----------------Result end------------------");
     }
 }
