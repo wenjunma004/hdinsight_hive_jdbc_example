@@ -1,1 +1,2 @@
-"# hdinsight_hive_jdbc_example" 
+## How to run?
+### mvn clean install exec:java
